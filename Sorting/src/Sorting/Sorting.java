@@ -9,6 +9,8 @@ public class Sorting {
 
 	public static void main(String[] args) throws IOException {
 		
+		long startTime = System.nanoTime();
+		
 		// TODO Auto-generated method stub
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
@@ -70,6 +72,11 @@ public class Sorting {
 		characterToContinue = (char) brObj.read();
 		
 		}while(characterToContinue != 'N');
+		
+		
+		long endTime = System.nanoTime();
+		
+		System.out.println("\nEntire Program Took "+(endTime - startTime) + " ns"); 
 		
 	}
 	

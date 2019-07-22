@@ -2,8 +2,9 @@ package Sorting;
 public class Selection implements SortingChoice{
 	@Override
 	public void sort(int array[], int size) {
-		// TODO Auto-generated method stub
 		
+		// TODO Auto-generated method stub
+		long startTime = System.nanoTime();
         // One by one move boundary of unsorted subarray
         for (int i = 0; i < size-1; i++)
         {
@@ -24,6 +25,10 @@ public class Selection implements SortingChoice{
             System.out.print(array[i]+" ");
 		
         System.out.println("SelectionSort");
+        
+        long endTime = System.nanoTime();
+		
+		System.out.println("\nSelection Sort Took "+(endTime - startTime) + " ns"); 
 	}
 }
 	
