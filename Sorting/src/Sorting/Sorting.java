@@ -32,16 +32,22 @@ public class Sorting {
 //		    System.out.println(arr[i]+"\t");
 //		}
 //		
+		char characterToContinue;
 		
-		System.out.println("\nEnter choice of sorting\n");
-		System.out.println("1:Selection Sort\n");
-		System.out.println("2:Quick Sort\n");
 		
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		String choiceString = reader.readLine();
-		//System.out.println(choiceString);    
 		
-		int choiceInt = Integer.parseInt(choiceString);
+		do {
+			
+			BufferedReader brObj = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("\nEnter choice of sorting\n");
+			System.out.println("1:Selection Sort\n");
+			System.out.println("2:Quick Sort\n");
+		
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			String choiceString = reader.readLine();
+			//System.out.println(choiceString);    
+			
+			int choiceInt = Integer.parseInt(choiceString);
 		
 			switch (choiceInt) {
 			case 1:
@@ -59,7 +65,11 @@ public class Sorting {
 			default:
 				break;
 			}
+		System.out.println("Do you want to continue(Y/N)::");
 		
+		characterToContinue = (char) brObj.read();
+		
+		}while(characterToContinue != 'N');
 		
 	}
 	
