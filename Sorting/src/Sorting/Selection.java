@@ -1,7 +1,7 @@
 package Sorting;
 public class Selection implements SortingChoice{
 	@Override
-	public void sort(int array[], int size) {
+	public int [] sort(int array[], int size) {
 		
 		// TODO Auto-generated method stub
 		long startTime = System.nanoTime();
@@ -29,6 +29,8 @@ public class Selection implements SortingChoice{
         long endTime = System.nanoTime();
 		
 		System.out.println("\nSelection Sort Took "+(endTime - startTime) + " ns"); 
+		
+		return array;
 	}
 }
 	

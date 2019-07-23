@@ -1,7 +1,7 @@
 package Sorting;
 public class Quick implements SortingChoice{
 	@Override
-	public void sort(int array[], int size) {
+	public int[] sort(int array[], int size) {
 		// TODO Auto-generated method stub
 		
 		long startTime = System.nanoTime();
@@ -24,6 +24,7 @@ public class Quick implements SortingChoice{
 		long endTime = System.nanoTime();
 		
 		System.out.println("\nQuick Sort Took "+(endTime - startTime) + " ns"); 
+		return array;
 	}
 	
 }
