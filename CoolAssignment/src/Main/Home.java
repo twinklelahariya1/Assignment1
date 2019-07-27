@@ -10,6 +10,12 @@ import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 //import Songs.Album;
 import Structures.*;
 
+/**
+ * 
+ * @author twinkle.lahariya
+ *
+ */
+
 public class Home {
 
 	public static Songs[] songValues() {
@@ -37,42 +43,18 @@ public class Home {
 		return songData;
 	}
 
-	public static void showAllLibraries(ArrayList<Library> library) {
-			
-		for(int i=0;i<2;i++)
-		System.out.println((library.get(i)).getLibrary());
-	}
-////
-//	static void showAllAlbums(ArrayList<Library> libList) {
-//		for(int i = 0; i < 3; i++) {
-//				libList.get(i).displayAlbums();
-//		}
-//	}
-////
-//	public static void showAllSongs(ArrayList<Library> library) {
-//
-//	}
-//
-//	public static void showLibrary(ArrayList<Object> library) {
-//
-//	}
-//
-//	public static void showAlbum(ArrayList<Object> album) {
-//
-//	}
-//
-//	public static void showSong(ArrayList<Object> songs) {
-//
-//	}
-
 	public static ArrayList<Library> createData() {
 
-		Songs songData[] = songValues();
-		ArrayList<Library> libraryList = libraryValues(albumValues(songData));
+		Songs songData[] = songValues(); // songvalues into songdata array
+		ArrayList<Library> libraryList = libraryValues(albumValues(songData));// creating data set
 		return libraryList;
 
 	}
 
+	
+	/*
+	 * function giving values of song data into albums
+	 */
 	public static ArrayList<Album> albumValues(Songs[] songData) {
 		ArrayList<Album> result = new ArrayList<>();
 		// TODO Auto-generated method stub
@@ -87,6 +69,11 @@ public class Home {
 		return result;
 	}
 
+	
+	
+	/*
+	 * function giving values of album data to libraries
+	 */
 	public static ArrayList<Library> libraryValues(ArrayList<Album> albums) {
 		ArrayList<Library> result = new ArrayList<>();
 		// TODO Auto-generated method stub
@@ -110,22 +97,12 @@ public class Home {
 
 		Scanner sc = new Scanner(System.in); // creating and initializing the Scanner class for getting user data
 
-		String choice = sc.nextLine(); // taking user choice
-
-		switch (choice) {
-		case "00":
-			showAllLibraries(library);
-			break;
-		case "01":
-			System.out.println(library.get(0));
-			break;
-		case "02":
-			System.out.println(library.get(1));
-			break;
-		
-		default:
-			System.out.println("Invalid Choice,try again");
-			break;
+		int choice = sc.nextInt(); // taking user choice
+		//control shifted to library class
+		if (choice == 0) {
+			Library.showAllLibraries(library);
+		} else if (choice == 1 || choice == 2) {
+			Library.showLibraries(library, choice);
 		}
 
 	}
