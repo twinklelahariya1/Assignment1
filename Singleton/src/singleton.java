@@ -10,7 +10,7 @@ class Single{
 	System.out.println(p);
 	}
 	
-	
+	//hello world
 	
 	
 	public static Single getInstance(String p) {
