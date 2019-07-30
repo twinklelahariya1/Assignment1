@@ -18,7 +18,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Food {
-	String name() default "";
+	String name() default "Food Name";
 
-	int price() default 0;
+	int price() default 10;
 }

@@ -26,14 +26,14 @@ public class Launcher {
 
 		foodItem.add(pizza);
 		foodItem.add(burger);
-		useAnnotations(foodItem);
+		Annotations(foodItem);
 
 	}
 
 	/*
 	 * Implementing annotations and displaying values
 	 */
-	static void useAnnotations(List<FoodItem> foodItems) {
+	static void Annotations(List<FoodItem> foodItems) {
 		for (FoodItem foodItem : foodItems) {
 
 			Class<? extends FoodItem> c = foodItem.getClass();
