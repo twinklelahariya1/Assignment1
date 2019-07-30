@@ -6,11 +6,19 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-	@Target(ElementType.TYPE)
-	@Retention(RetentionPolicy.RUNTIME)
-	@Documented
-	public @interface Food {
-		String name() default "";
+/**
+ * 
+ * @author twinkle.lahariya
+ * 
+ *         Annotation for class level implementation
+ *
+ */
 
-		int price() default 0;
-	}
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface Food {
+	String name() default "";
+
+	int price() default 0;
+}
