@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 public class studentDataManipulation {
 
-	final static java.util.logging.Logger LOGGER = LogManager.getLogger(AvailabilityCheck.class.getName());
+	final static java.util.logging.Logger LOGGER = LogManager.getLogger(studentDataManipulation.class.getName());
 
 	static Connection connection;
 
